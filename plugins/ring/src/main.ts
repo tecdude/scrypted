@@ -736,7 +736,7 @@ class RingPlugin extends ScryptedDeviceBase implements DeviceProvider, DeviceDis
         },
         loginCode: {
             title: 'Two Factor Code',
-            description: 'Optional: If 2 factor is enabled on your Ring account, enter the code sent by Ring to your email or phone number.',
+            description: 'Optional: If 2 factor is enabled on your Ring account, enter the code either from email or text, or via an authenticator app.',
             onPut: async (oldValue, newValue) => {
                 await this.tryLogin(newValue);
                 this.console.log('login completed successfully with 2 factor code');
